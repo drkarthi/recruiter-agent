@@ -1,0 +1,34 @@
+Recruiter: Welcome back, Terrence! We’re now looking at a role on the AWS Consumer Experience team. It’s a senior data science position focused on analytics, machine learning, and GenAI to improve customer satisfaction. Have you had exposure to AI-driven customer tools?
+Terrence: Definitely. At Best Buy, I led a project where we used NLP to analyze customer reviews and support tickets. We applied sentiment analysis and topic modeling to highlight areas for product improvement and support scripting. Later, I prototyped a summarization tool using GPT-3 to help our support team reduce handling time.
+Recruiter: That’s exactly the kind of innovation we look for. Can you walk me through your process for implementing something like the GPT-based summarizer?
+Terrence: Sure. We started with a dataset of 50,000 support tickets. First, I fine-tuned a summarization model on historical agent responses using Hugging Face’s Transformers and the OpenAI API as a baseline. We then evaluated ROUGE scores to compare summaries.
+To validate usefulness, we ran a pilot with live agents using the tool and collected feedback. We saw a 17% reduction in average handle time and a 9-point improvement in CSAT scores.
+After that, I worked with engineering to wrap the model in a secure API and connected it to our internal CRM. We also set up user feedback loops to fine-tune the prompts and adjust summaries.
+Recruiter: That’s a thorough end-to-end deployment. This role also emphasizes experimentation—have you run A/B tests or similar?
+Terrence: Absolutely. I’ve run A/B tests to evaluate recommendation models and UI changes. At 2U, we tested alternate navigation flows in our learning platform and saw bounce rates drop by 62%. I designed the experiment, calculated sample sizes, and ran analyses using Python and Statsmodels.
+I also built a dashboard that automatically updated experiment results and flagged statistical significance using color-coded indicators.
+Recruiter: You’re clearly data fluent. What’s your philosophy around measuring model success?
+Terrence: I like to frame success in business terms first—what are we trying to move? That could be reduced churn, increased conversion, or faster resolution. Then I back into model metrics—precision, recall, lift, latency.
+For customer-facing models, I focus on interpretability and feedback loops. You can’t just ship and forget—you need to watch behavior shifts and be ready to iterate.
+Recruiter: Love that. This role also involves evangelizing ML across non-technical teams. How do you approach cross-functional communication?
+Terrence: I use three tiers: technical writeups for scientists, annotated dashboards for analysts, and slide decks with business impact for executives. I often run “ML 101” sessions and present updates in product syncs.
+I’ve found storytelling is crucial—use a real example of customer impact to make your point, not just model metrics.
+Recruiter: That’s spot on. Have you ever led adoption of a new tool or methodology across your team?
+Terrence: Yes. I led our team’s transition from spreadsheet-based tracking to using MLFlow for model versioning and experiment tracking. I conducted training sessions, wrote documentation, and worked with DevOps to integrate MLFlow into our CI/CD pipeline.
+Adoption was gradual, but now the team uses it regularly, and it’s improved reproducibility significantly.
+Recruiter: That’s a major win. What about working with product and design teams?
+Terrence: I love collaborating with product. At Best Buy, I co-developed customer personas based on clustering analysis and worked with design to prototype new onboarding flows. That collaboration led to a pilot that increased account completions by 14%.
+Product and design are crucial—without them, data science stays in a vacuum.
+Recruiter: Great perspective. Any experience with personalization or recommender systems?
+Terrence: Yes. I worked on a production recommendation engine using collaborative filtering. We tracked user-product interaction, time on page, and cart abandonment patterns. We tested matrix factorization vs. lightGBM ranking and ultimately used a hybrid model.
+This project directly influenced homepage modules and generated over $450K in annual incremental revenue.
+Recruiter: Fantastic. What excites you about this team?
+Terrence: I’m drawn to the scale—millions of users, global systems, and continuous innovation. I also appreciate Amazon’s customer obsession. I want to bring data science into the heart of product decisions, not just optimize after the fact.
+Recruiter: Wonderful. Final question—what would you do in your first 90 days?
+Terrence: I’d start by immersing myself in customer data—tickets, NPS, feedback loops. Then I’d meet with stakeholders across product, engineering, and support to understand their pain points. My goal would be to deliver a proof-of-concept GenAI feature and present a roadmap aligned to business outcomes.
+Recruiter: Love the initiative. Any questions for me?
+Terrence: Yes—how are GenAI projects prioritized across teams?
+Recruiter: We encourage bottom-up innovation. Teams pitch ideas and prototypes, which we evaluate for feasibility, alignment, and impact. Good ideas are fast-tracked to engineering.
+Terrence: That’s fantastic. I’d love to be part of that.
+Recruiter: Thanks again, Terrence. We’ll follow up with next steps soon!
+

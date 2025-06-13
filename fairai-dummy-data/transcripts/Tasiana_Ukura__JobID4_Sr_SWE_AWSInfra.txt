@@ -1,0 +1,22 @@
+Recruiter: Welcome back, Tasiana. We’re now looking at the Sr. Software Engineer role on our AWS Infrastructure Services team. This team owns the internal tools that support all our global data centers.
+Tasiana: Sounds like a high-impact role. Supporting AWS infrastructure touches everything.
+Recruiter: Exactly. Let’s start with reliability. Can you describe a time when you had to build or maintain a system with 24/7 uptime?
+Tasiana: At Adaptiva, we had a global content distribution system used by Fortune 500 companies. I was responsible for the caching layer that ensured delivery of content across regions. Downtime wasn’t an option.
+We used a hybrid model—on-prem and AWS. I implemented health checks, backup caches, and data replication using S3. I also set up redundancy with Route 53 failovers and alarms on latency thresholds. We hit 99.99% uptime over a year.
+Recruiter: Very thorough. This role requires infrastructure-as-code and automation. What tools have you used?
+Tasiana: I’ve worked with CloudFormation, but lately I prefer Terraform. It’s easier to modularize and reuse configs. I’ve built VPCs, IAM roles, and ECS clusters using it. I also use Jenkins for CI/CD and created reusable pipelines for deploying microservices with rollback capabilities.
+Recruiter: Perfect. How do you ensure your systems scale without compromising reliability?
+Tasiana: I believe in proactive scalability. I use metrics like P95 latency and error rates to forecast load thresholds. I also implement feature flags and circuit breakers, so we can toggle off features under stress.
+We also use load testing with Gatling and simulate spike traffic to fine-tune autoscaling policies.
+Recruiter: That’s spot-on. You’ve also mentored engineers—tell me more about that.
+Tasiana: At Fast, I mentored 6 interns over 3 summers and helped onboard 3 new hires. I created “challenge tasks” that taught them about logging, retries, and scaling. I also held office hours weekly and did architecture reviews to help them learn trade-offs in system design.
+Recruiter: How do you make sure your architecture decisions hold up long-term?
+Tasiana: I write ADRs—Architecture Decision Records. Every major decision has rationale, trade-offs, and rejection reasons. I also build with interface segregation in mind, and prioritize observability from day one. I’d rather over-instrument than under-prepare.
+Recruiter: Excellent philosophy. Let’s talk security. What’s your approach?
+Tasiana: Least privilege first. I use IAM roles scoped to exact services and enable audit logging. We encrypt all traffic internally and externally. I’ve also integrated WAF for DDoS protection and configured alerts for abnormal API calls.
+Recruiter: How would you improve a system where deployments take 30 minutes?
+Tasiana: I’d first analyze the pipeline—what’s taking time? Is it build, test, or deploy? I’d containerize the app if not already, cache dependencies, parallelize tests, and consider blue/green or canary deployments to cut downtime.
+Recruiter: You’re very solutions-oriented. Final question—why this role?
+Tasiana: I enjoy building systems where the users are other engineers. If I can make their tools more reliable, scalable, and intuitive, I know I’m having exponential impact.
+Recruiter: Incredible answer. Thank you, Tasiana. We’ll be in touch soon.
+

@@ -1,0 +1,62 @@
+ecruiter: Hi Charles, thanks for joining! This role is with Project Kuiper—Amazon’s initiative to launch a constellation of satellites to deliver global broadband. Familiar with it?
+
+Charles: Yes, I actually read about it in a tech journal last year. The scale of it caught my attention—thousands of satellites in low Earth orbit managing real-time connectivity. It’s the kind of project that pushes system engineering to the edge.
+
+Recruiter: Absolutely. We’re glad you’re excited. Let’s start with your background. Can you tell me about a system you designed that needed to handle high throughput or performance?
+
+Charles: Certainly. At my last role, I worked on the backend of an order tracking API for a major e-commerce platform. Originally, it was designed to handle 10,000 requests per day, but over time, that ballooned to over 200,000. We were seeing issues with database locks and API response time, especially during peak sales.
+
+So, I led an effort to re-architect the service. We adopted an event-driven architecture using Kafka to decouple the workflow. Each stage—validation, persistence, notification—became its own microservice. We also introduced Redis for temporary state caching and partitioned the database schema to reduce contention.
+
+That redesign brought down average response times by 40% and reduced our failure rate by 90% during load spikes.
+
+Recruiter: That’s a great example. This role requires close collaboration with scientists and data engineers who are building telemetry models. Have you worked alongside ML teams?
+
+Charles: Yes, I have. One notable instance was when we built a fraud detection system. Our data science team was working on a decision-tree model using scikit-learn, and my role was to integrate the model into the production system. I worked closely with them to understand the model inputs and outputs, and built a Python-based REST API to host the model.
+
+I also set up logging and performance metrics—like how often the model was triggered and how many predictions aligned with the actual flagged fraud. We used those logs to refine the model’s training dataset. That collaboration taught me a lot about bridging engineering and data science.
+
+Recruiter: Sounds like you have a solid grasp on operationalizing models. One of the key design challenges we face is ingestion and processing of high-velocity satellite data. Say you're tasked with designing a telemetry data service that handles 100,000 events per second. How would you approach it?
+
+Charles: First, I’d consider buffering to avoid overwhelming downstream systems. Kafka or Kinesis would be my go-to for streaming ingestion. I’d partition data by satellite ID or geographic region to allow parallelism.
+
+For processing, I’d use Lambda functions or containerized workers on ECS or Fargate depending on state requirements. I’d store raw data in S3 and processed metrics in a time-series database like Amazon Timestream or a DynamoDB table optimized with composite keys.
+
+We’d also build in backpressure mechanisms and autoscaling policies. Monitoring would be handled through CloudWatch, with alarms on processing lag or error rate.
+
+Recruiter: That’s a detailed and thoughtful design. Let’s talk programming. We use Java heavily—what’s your experience with it?
+
+Charles: I’ve worked with Java for over five years. I’ve built REST APIs using Spring Boot, dealt with concurrency using ExecutorService, and written custom serializers. Java’s verbosity actually helps in regulated or mission-critical environments, I think. I’m comfortable with Java 11 and have tinkered with newer features like var and the enhanced switch syntax in Java 14.
+
+Recruiter: You’re clearly comfortable at the systems level. What about AWS—what services have you used?
+
+Charles: I’ve used EC2 for compute, S3 for storage, and IAM for security management. I’ve deployed services using Elastic Beanstalk and started using ECS for Dockerized workloads. Recently, I’ve been exploring Lambda, which I used in a side project to set up a serverless file processing workflow. Also, I’ve worked with CloudFormation for templating infrastructure.
+
+Recruiter: That’s a great mix. Let’s pivot briefly—have you had to debug intermittent failures in production?
+
+Charles: Yes, and those are some of the hardest bugs. One case involved sporadic null pointer exceptions during high-load scenarios. Initially, logs weren’t helpful, so I added structured logging and traced session IDs. I eventually found a race condition where two threads were modifying a shared resource without synchronization.
+
+I introduced a thread-safe data structure and implemented retries with exponential backoff. Post-fix, I added unit tests that simulated concurrent access and also set up performance monitoring to detect CPU spikes linked to that issue.
+
+Recruiter: Excellent problem-solving. One thing we care about is mentorship. Have you mentored junior engineers?
+
+Charles: Absolutely. At my last job, I mentored two interns and one junior engineer. I pair-programmed with them, did detailed code reviews, and included them in architecture discussions. One of them is now leading their own feature pod, which was really rewarding to see.
+
+Recruiter: How do you simplify complex technical concepts for teammates or non-engineers?
+
+Charles: I rely on analogies and diagrams. For instance, I once explained Kafka’s consumer group model using a “mail sorter” analogy. I also believe in over-communicating during design reviews and use Google Docs and whiteboarding liberally.
+
+Recruiter: Before we wrap up—what drew you to this specific role?
+
+Charles: Two things: the scale and the impact. Designing systems that operate in space and help connect underserved communities is incredibly meaningful. I want to be part of something that pushes the boundary of what we can do with technology.
+
+Recruiter: Fantastic. Last question—do you have any questions for me?
+
+Charles: Yes, how often does this team deploy new features? And what’s the culture around failure?
+
+Recruiter: Great questions. We operate on two-week sprints but deploy microservices multiple times a week. As for failure—we encourage calculated risks. We do blameless post-mortems and track learnings. Innovation doesn't happen without mistakes.
+
+Charles: Love that. Thanks for the thoughtful conversation.
+
+Recruiter: Thank you, Charles. We’ll be in touch soon!
+

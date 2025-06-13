@@ -1,0 +1,25 @@
+Recruiter: Hi Tasiana, welcome! This is for the SDE role with Project Kuiper. It's a unique opportunity to work on space-to-ground infrastructure that supports global internet access. Excited?
+Tasiana: Absolutely! The scale and the mission behind Kuiper are both inspiring. It’s not just software—it’s impact.
+Recruiter: Well said. Let’s dive in. Could you start by telling me about a project where you had to build a distributed system or something with performance demands?
+Tasiana: Sure. At Fast, I was part of the core engineering team responsible for scaling our checkout system. We went from thousands to over 2 million daily users. My focus was the transaction verification pipeline. Initially, we used synchronous verification, but it became a bottleneck.
+So I re-architected it using AWS Lambda and SQS to create an asynchronous processing flow. Each verification step became its own microservice, and we included retries and dead-letter queues. This change improved throughput by 60% and reduced timeouts by 35%.
+Recruiter: That’s a fantastic transformation. Project Kuiper’s data layer includes high-throughput telemetry. How would you approach the ingestion of time-series data from thousands of satellite sources?
+Tasiana: I’d use a streaming model. Kinesis or Kafka for ingestion, and then set up Lambda consumers for lightweight transformations. For time-series data, I’d use a purpose-built database like Timestream or even InfluxDB if it’s on-prem.
+Each satellite could be treated as a partition key to support parallel writes. I’d also include CloudWatch alerts to detect lag or dropped packets.
+Recruiter: You clearly understand cloud-first design. What’s your experience with AWS in production?
+Tasiana: Quite a bit. I’ve used EC2, Lambda, DynamoDB, and S3 extensively. At Fast, we deployed our payment gateway on ECS, and we monitored it using CloudWatch, with custom dashboards for latency and errors. I’ve also scripted CloudFormation stacks for staging environments.
+Recruiter: Have you worked on teams that also support machine learning engineers?
+Tasiana: Yes. Our fraud prevention system was powered by a logistic regression model initially, and later a boosted trees model. I helped integrate the model into our backend API, wrapped it in a Flask app, and set up versioning so we could A/B test model outputs.
+I also built a model monitoring dashboard using QuickSight to show precision, recall, and business impact over time.
+Recruiter: I like that you measured impact. Let’s talk programming languages. What’s your stack?
+Tasiana: Python is my go-to for data work, but I write production services in JavaScript (NodeJS), Java, and increasingly Go. I’ve also worked in C++ during my time at Adaptiva when performance tuning was critical.
+Recruiter: You seem versatile. How do you handle on-call rotations?
+Tasiana: I take a proactive approach. Before going on-call, I review recent deploys, error logs, and metrics. I ensure runbooks are up to date. During incidents, I log everything, isolate the issue, and always propose a post-mortem fix. I don’t just patch—I automate where I can.
+Recruiter: That’s the reliability mindset we value. What motivates you about this role?
+Tasiana: The mission. Connecting remote communities using advanced technology isn’t just a technical challenge—it’s meaningful work. And the combination of satellite and terrestrial systems really pushes the boundary of software engineering.
+Recruiter: Beautifully said. One last question—how do you onboard junior engineers?
+Tasiana: I assign them small but critical tasks early, like writing tests or documenting edge cases. I also do weekly pairing sessions and create a “first 30 days” guide personalized to their experience. I want them to feel ownership quickly.
+Recruiter: That’s excellent. You’ve been great, Tasiana. Any final questions?
+Tasiana: Just curious—how big is the engineering team on Kuiper currently?
+Recruiter: We’re growing rapidly—right now about 100 engineers across telemetry, networking, and ML systems. But we still operate like a startup within Amazon.
+Tasiana: That’s the sweet spot. Thanks for the great chat!

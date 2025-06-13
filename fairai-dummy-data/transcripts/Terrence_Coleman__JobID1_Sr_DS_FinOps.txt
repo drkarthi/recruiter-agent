@@ -1,0 +1,29 @@
+Recruiter: Hi Terrence, thanks for joining! We’re hiring for a Senior Data Scientist in our FinOps analytics group at Amazon. This team supports Accounts Payable and aims to optimize Free Cash Flow. How does that sound to you?
+Terrence: That sounds like a great intersection of business impact and data science. I’ve always enjoyed working on projects that link directly to financial outcomes—there’s clarity in the goals, and you can measure your impact precisely.
+Recruiter: Exactly. We’re looking for someone who’s both deeply technical and can work closely with finance stakeholders. Can you tell me about a project where you worked on a financial or operational model?
+Terrence: Certainly. At Best Buy, one of my main contributions was a supplier segmentation model. We had thousands of vendors, and our procurement team lacked clear metrics to identify which ones were strategic.
+So, I created a clustering model using K-means with dimensionality reduction via PCA to classify suppliers based on spend volume, delivery reliability, payment terms, and return rates. That model became the basis for a new vendor management dashboard and enabled renegotiation of terms with the bottom quartile of vendors—ultimately saving the company over $1.2 million annually.
+Recruiter: That’s a great result. FinOps involves fraud detection, anomaly flagging, and payment optimization. Have you done work in anomaly detection?
+Terrence: Yes. We built a transaction anomaly detection model using Random Forest and isolation forests, trained on a balanced dataset of known good and flagged cases. Features included transaction frequency, vendor history, payment amounts, and time-based patterns.
+To reduce false positives, we tuned hyperparameters based on feedback from the fraud team and integrated the model into a rule-based filter. That combination reduced flagged false positives by 28% while catching 12% more true anomalies than the prior approach.
+Recruiter: Amazing. This role also involves managing ETL pipelines. Do you typically work with data engineers, or build your own pipelines?
+Terrence: I often build my own. I’m comfortable using SQL, Python with Pandas and PySpark. For one model, I built an entire pipeline that ingested daily invoices, joined them with shipment logs, and transformed the data to derive payment cycles. The pipeline was orchestrated with Airflow and processed about 10 million records per week.
+Recruiter: That’s the level of scale we deal with too. Have you worked in a cloud environment like AWS?
+Terrence: Absolutely. I’ve worked with S3 for storage, Redshift and Athena for querying, Lambda for automation, and SageMaker for deploying models. I’ve also used QuickSight for creating financial dashboards tailored to business audiences.
+Recruiter: That’s perfect. What’s your approach when you’re asked to model something you don’t fully understand?
+Terrence: I always start with a discovery phase. I meet with domain experts to understand the data-generating process, identify what "normal" behavior looks like, and map potential sources of variation. I sketch out a data map, list assumptions, and then proceed with exploratory analysis.
+I also document questions upfront, so stakeholders stay involved and can help correct misunderstandings early.
+Recruiter: That’s great collaboration. This team presents often to finance directors. How do you communicate complex model results?
+Terrence: I contextualize. For example, instead of saying "Recall improved by 12%," I might say, "We’re now catching 120 more anomalies per 1,000 transactions—with fewer false alarms." I rely on visuals like confusion matrices, cost-benefit plots, and clear thresholds that matter to their KPIs.
+Recruiter: Very clear. Do you also mentor other data scientists?
+Terrence: Yes. I currently mentor two junior scientists. I do weekly check-ins, help them debug model issues, and encourage them to document and present their work in team demos. I also co-developed our team’s internal “ML Best Practices” doc.
+Recruiter: What about model productionization? Are you involved in that?
+Terrence: Yes. I package models with Flask or FastAPI, dockerize them, and push them into staging environments. I use MLFlow for experiment tracking, and I’ve integrated monitoring scripts that track model drift and input schema changes.
+Recruiter: Great. Why are you drawn to this particular FinOps role?
+Terrence: I like that it’s data science with real dollars attached. The idea that better predictions can improve cash flow, reduce waste, and protect against fraud is a compelling way to use my skills. And I enjoy interfacing with operations teams.
+Recruiter: Excellent. Final question—any questions for me?
+Terrence: Yes—how does this team measure success for data science projects?
+Recruiter: We look at direct financial impact, adoption by stakeholders, and model reliability. Models should not only be accurate but interpretable and maintainable.
+Terrence: Perfect. Thanks for the thoughtful conversation.
+Recruiter: Thanks, Terrence. We’ll follow up soon!
+

@@ -1,0 +1,39 @@
+Recruiter: Welcome back, Charles. Let’s shift gears to AWS Infrastructure Services. This team builds internal tools and services that support global data center operations for AWS. Are you familiar with large-scale infrastructure challenges?
+
+Charles: Yes, especially on the software side. While I haven’t managed physical infrastructure, I’ve built distributed backend systems that needed 24/7 uptime and strong monitoring. I’ve also had to design APIs that interact with inventory databases and power management controllers during my time at an IoT-focused startup.
+
+Recruiter: That’s a good start. Let’s dive into reliability. Tell me about a system you built with uptime as a priority.
+
+Charles: At a previous company, we built a job scheduling service used by several internal teams. It couldn’t afford to miss a task. We designed it with a replicated PostgreSQL cluster, and we deployed using blue/green deployments to avoid downtime during upgrades. Failover was handled with automated health checks and a secondary load balancer setup.
+
+I also implemented detailed metrics around task success rate and latency using Prometheus and Grafana.
+
+Recruiter: Sounds robust. This team uses AWS services extensively—what’s your experience with CloudFormation or infrastructure as code?
+
+Charles: I’ve written CloudFormation templates to provision EC2 instances, S3 buckets, and IAM roles. I’m also experimenting with Terraform and find the module system useful for DRY principles. I like having reproducible infrastructure that can be tested and version-controlled.
+
+Recruiter: What about security practices? Any experience with secure architecture?
+
+Charles: Yes. At my last job, we implemented role-based access control across microservices using IAM and JWT tokens. We also encrypted data at rest with KMS and rotated credentials using AWS Secrets Manager. I worked closely with our DevSecOps lead to pass quarterly security audits.
+
+Recruiter: This is a senior role, so mentoring is a must. What’s your approach?
+
+Charles: I take a coaching-based approach. I try to understand where the engineer is—technically and professionally. Then I create learning paths and pair on tough problems. I also encourage documentation and knowledge sharing.
+
+Recruiter: Have you led any architectural decisions recently?
+
+Charles: Yes, I proposed transitioning a batch reporting system to an event-based model. We replaced daily jobs with real-time consumers, which improved data freshness and reduced AWS spend by 30%. I led the planning, spike, and final implementation phases.
+
+Recruiter: How do you ensure your designs are future-proof?
+
+Charles: I follow principles like separation of concerns, use interfaces for extensibility, and write ADRs—Architectural Decision Records. I also plan for versioning and gradual rollout. Tech debt is inevitable, but you can reduce its velocity.
+
+Recruiter: Love that mindset. Do you have any questions for us?
+
+Charles: What’s the team’s culture around technical innovation?
+
+Recruiter: Very supportive. We have a monthly "Innovation Friday" where engineers pitch and prototype ideas. Several internal tools came out of those.
+
+Charles: That sounds amazing. Thanks for the transparency!
+
+Recruiter: You’re welcome. We’ll be in touch for the next steps.

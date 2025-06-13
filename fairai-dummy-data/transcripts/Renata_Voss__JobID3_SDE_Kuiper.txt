@@ -1,0 +1,26 @@
+Recruiter: Hi Renata, thanks for joining! We’re talking about the SDE role for Project Kuiper. Given your leadership experience, how hands-on are you these days?
+Renata: Still very hands-on. At Adobe, I manage engineering teams, but I personally own and maintain a set of services—including our internal identity provider and risk analysis APIs. I also help onboard new devs with deep dives into our platform codebase. So, I stay close to the technical stack.
+Recruiter: Great to hear. Kuiper’s services involve telemetry from a satellite network. Have you worked on high-throughput systems before?
+Renata: Yes. At Adobe, we had a product telemetry system that ingested usage and performance data from desktop and mobile apps globally. It handled millions of events daily. I designed the ingestion layer using Kinesis for buffering and Lambda for transformation. We used S3 for long-term storage and DynamoDB for real-time queries.
+Recruiter: That’s a great parallel. What would be your first move when designing a telemetry service for satellites pushing real-time data?
+Renata: First, I’d define SLAs—latency targets, throughput, and uptime. Then I’d design for ingestion scalability using partitioned topics or streams—Kinesis or Kafka. For processing, I’d opt for Fargate or ECS containers for granular control.
+I’d separate real-time versus batch workloads, introduce time-windowed aggregations, and store snapshots in a time-series store. I’d also build health dashboards from Day 1.
+Recruiter: Love that mindset. Kuiper uses Java for much of its backend. Are you fluent in Java?
+Renata: Yes, I’ve written Java extensively across my career. From Spring Boot services to low-latency thread-safe components using the concurrent package. At PayPal, I built systems that had strict throughput and response time constraints, all in Java.
+Recruiter: Let’s talk AWS. Which services are you most comfortable with?
+Renata: I’ve used a broad range—S3, EC2, Lambda, DynamoDB, CloudFormation, IAM. For observability, I use CloudWatch Logs, Metrics, and X-Ray. I’ve also managed cross-region failovers using Route 53 and CloudFront for CDN logic.
+Recruiter: Have you worked with ML teams or deployed models?
+Renata: Yes, in two ways. First, I led infrastructure for a fraud prevention system where models were trained in SageMaker and deployed via custom Flask containers. I helped build the deployment CI/CD pipeline and model A/B testing framework.
+Second, I’ve worked with data scientists to optimize model inference latency—reducing it from 800ms to 200ms by improving batch sizing and GPU utilization.
+Recruiter: That’s fantastic. What’s your process for debugging a flaky system?
+Renata: I start by understanding the scope—metrics, logs, and recent changes. If the issue is performance, I use profilers and APM tools. I try to reproduce in staging or run synthetic tests.
+When it’s network-related, I trace requests across services with correlation IDs. If it’s infra-related, I check autoscaling and instance health. Then I write a blameless postmortem to share findings.
+Recruiter: This role also includes mentoring junior engineers. What’s your mentoring style?
+Renata: I believe in progressive autonomy. I start with pairing, then give them full ownership of small features. I encourage design doc writing and join them in stakeholder meetings. I also have a biweekly “tech growth” session for coaching beyond tickets.
+Recruiter: That’s great. Why are you interested in Kuiper specifically?
+Renata: I love the challenge of edge systems and constrained networks. Building reliable systems that operate from orbit, with all their latency and signal variation—that’s a unique problem space. Also, bringing connectivity to underserved communities is deeply meaningful.
+Recruiter: You sound like a strong fit. Any final questions for us?
+Renata: Yes—what’s the team’s approach to innovation and internal tooling?
+Recruiter: We encourage internal hackathons and support engineers to open-source internal projects where appropriate. Many of our telemetry tools began as internal side efforts.
+Renata: That’s awesome. Thanks for the deep conversation!
+
